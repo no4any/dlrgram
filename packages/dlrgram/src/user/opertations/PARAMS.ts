@@ -1,0 +1,1 @@
+export const HMAC_SHA256_SECRET = "secret";
