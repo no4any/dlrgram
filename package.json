@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "yarn workspace @dlrgram/dlrgram start",
+    "build": "yarn workspace @dlrgram/dlrgram build",
+    "dev": "yarn workspace @dlrgram/dlrgram dev",
+    "lint": "yarn workspace @dlrgram/dlrgram lint"
+  },
+  "repository": "https://github.com/no4any/dlrgram.git",
+  "author": "No4Any",
+  "license": "MIT"
+}
