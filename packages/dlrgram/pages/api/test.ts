@@ -1,16 +1,12 @@
+import httpFilter from "@/src/http/httpFilter.function"
 import { NextApiRequest, NextApiResponse } from "next"
-import { getServerSession } from "next-auth/next"
-import { authOptions } from "./auth/[...nextauth]"
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
-    const session = await getServerSession(req, res, authOptions)
-
-    if (session) {
-        res.status(200).json({
-            loggedIn: true
-        })
-    } else {
-        res.status(401).json("")
-    }
-    res.end();
+async function apiTest(req: NextApiRequest, res: NextApiResponse) {
+    res.json({msg: "OK"});
 }
+
+export default httpFilter({
+    methods: ["GET"],
+    //contentTypes: ["application/json"],
+    authOnly: true
+}, apiTest);
