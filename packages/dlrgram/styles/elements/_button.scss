@@ -1,0 +1,23 @@
+button {
+	background-color: $dlrg-white;
+	border-radius:28px;
+	border:1px solid $dlrg-black;
+	display:inline-block;
+	cursor:pointer;
+	color: $dlrg-black;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px $dlrg-gray;
+}
+
+button:hover {
+	background-color:$dlrg-gray;
+    color: $dlrg-white;
+}
+
+button:active {
+	position:relative;
+	top:1px;
+}

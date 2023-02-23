@@ -1,11 +1,15 @@
+import Body from "./Body.component"
+import Footer from "./Footer.component"
+import Header from "./Header.component"
+
 export interface FrameProps {
     children: any
 }
 
 export default function Frame(props: FrameProps) {
     return <div id="frame">
-        <div id="head">Head</div>
-        <div id="body">{props.children}</div>
-        <div id="footer">Footer</div>
+        <Header />
+        <Body>{props.children}</Body>
+        <Footer />
     </div>
 }

@@ -1,0 +1,33 @@
+#frame {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas:
+        "header"
+        "body"
+        "footer";
+
+    #header {
+        grid-area: header;
+
+        img {
+            height: 40px;
+        }
+    }
+
+    #body {
+        grid-area: body;
+        background-color: $dlrg-white;
+        color: $dlrg-black;
+    }
+
+    #footer {
+        grid-area: footer;
+    }
+
+    #header, #footer {
+        background-color: $dlrg-red;
+        color: $dlrg-yellow;
+        padding: 5px;
+    }
+}
