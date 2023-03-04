@@ -11,5 +11,6 @@
   },
   "repository": "https://github.com/no4any/dlrgram.git",
   "author": "No4Any",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {}
 }

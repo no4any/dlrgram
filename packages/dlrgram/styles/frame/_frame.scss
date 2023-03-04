@@ -6,12 +6,35 @@
         "header"
         "body"
         "footer";
+    width: 100%;
 
     #header {
         grid-area: header;
+        display: grid;
+        width: 100%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: "left right";
 
-        img {
-            height: 40px;
+        .left {
+            grid-area: left;
+            img {
+                height: 40px;
+            }
+        }
+
+        .right {
+            grid-area: right;
+            text-align: right;
+            padding: 5px;
+
+            .iconLink {
+                color: $dlrg-yellow;
+                transition: all .5s ease-in-out;
+                font-size: 30px;
+                &:hover {
+                    color: $dlrg-white;
+                }
+            }
         }
     }
 
@@ -25,7 +48,8 @@
         grid-area: footer;
     }
 
-    #header, #footer {
+    #header,
+    #footer {
         background-color: $dlrg-red;
         color: $dlrg-yellow;
         padding: 5px;
